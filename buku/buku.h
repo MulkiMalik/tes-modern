@@ -10,9 +10,14 @@ private:
     std::string penulis;
 
 public:
+    Buku();
     Buku(int id, std::string judul, std::string penulis);
 
     void tampilkan();
+
+    int getId();
+    std::string getJudul();
+    std::string getPenulis();
 };
 
 #endif

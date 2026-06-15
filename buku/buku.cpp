@@ -1,14 +1,34 @@
-#include "buku.h"
+#include "Buku.h"
 #include <iostream>
 
-Buku::Buku(int id, std::string judul, std::string penulis) {
+using namespace std;
+
+Buku::Buku() {
+    id = 0;
+    judul = "";
+    penulis = "";
+}
+
+Buku::Buku(int id, string judul, string penulis) {
     this->id = id;
     this->judul = judul;
     this->penulis = penulis;
 }
 
 void Buku::tampilkan() {
-    std::cout << "ID: " << id << std::endl;
-    std::cout << "Judul: " << judul << std::endl;
-    std::cout << "Penulis: " << penulis << std::endl;
+    cout << "ID      : " << id << endl;
+    cout << "Judul   : " << judul << endl;
+    cout << "Penulis : " << penulis << endl;
+}
+
+int Buku::getId() {
+    return id;
+}
+
+string Buku::getJudul() {
+    return judul;
+}
+
+string Buku::getPenulis() {
+    return penulis;
 }
